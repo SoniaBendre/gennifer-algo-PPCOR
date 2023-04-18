@@ -2,7 +2,6 @@ import os
 import pandas as pd
 
 import ppcor
-from distributed import Client
 
 DATASET_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'sample_data')
 
