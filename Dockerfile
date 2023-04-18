@@ -1,10 +1,10 @@
 # Pull the base beeline dockerhub image
-FROM grnbeeline/arboreto:base
+FROM grnbeeline/ppcor:base
 
 # Set the working directory to /app
 WORKDIR /app
 
-# Copy the current directory contents into the container at /app
+# Copy the current directory contents (including ppcor.r) into the container at /app
 COPY . /app
 
 # Install the required packages
