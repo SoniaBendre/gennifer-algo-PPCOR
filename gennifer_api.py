@@ -11,6 +11,7 @@ def generateInputs(dataset_uri):
     inputExpr.index = geneNames
 
 def run(inputExpre):
+    # os.system run the R file directly.
     network = pcor(x = np.transpose(inputExpr.values), method = "spearman")
     return network
 
