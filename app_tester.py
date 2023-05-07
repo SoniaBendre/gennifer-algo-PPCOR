@@ -17,7 +17,7 @@ class RunAlgo(Resource):
         print(args)
         inputs = generateInputs()
         res = run()
-        output = parseOutput()
+        output = parseOutput(res)
         return output, 201
 
 api.add_resource(RunAlgo, '/run')

@@ -9,15 +9,14 @@ api = Api(app)
 
 parser = reqparse.RequestParser()
 parser.add_argument('exp_dataset_uri')
-parser.add_argument('algo')
 
 
 class RunAlgo(Resource):
     def post(self):
         args = parser.parse_args()
         inputs = generateInputs(args['exp_dataset_uri'])
-        res = run(inputs, args['algo'])
-        output = parseOutput(*res)
+        res = run(inputs)
+        output = parseOutput(res)
         return output, 201
 
 api.add_resource(RunAlgo, '/run')
