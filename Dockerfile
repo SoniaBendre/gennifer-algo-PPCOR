@@ -10,7 +10,7 @@ RUN R -e "install.packages('https://cran.r-project.org/src/contrib/ppcor_1.1.gz'
 # Set the working directory to /app
 WORKDIR /app
 
-# Copy the current directory contents into the container at /app
+# Copy the current directory contents (including ppcor.r) into the container at /app
 COPY . /app
 
 # RUN apt-get update && apt-get install -y python3-pip
